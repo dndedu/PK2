@@ -32,9 +32,11 @@ Dictionary *erstelle_dictionary(int size)
 int insert(Dictionary *dict, int daten)
 {
     int hash_index = daten % dict->size;
+
     Liste *neue_liste = malloc(sizeof(Liste));
     neue_liste->daten = daten;
     neue_liste->next = dict->listen[hash_index];
+    
     dict->listen[hash_index] = neue_liste;
     return 1;
 }
@@ -105,32 +107,32 @@ int main(int argc, char *argv[])
     }
     printf("\n");
 
-    // Alle Zahlen aus der Kommandozeile in das Dictionary aufnehmen
-    for (int i = 1; i < argc; i++)
-    {
-        int daten = atoi(argv[i]);
-        insert(dict, daten);
-    }
+    // // Alle Zahlen aus der Kommandozeile in das Dictionary aufnehmen
+    // for (int i = 1; i < argc; i++)
+    // {
+    //     int daten = atoi(argv[i]);
+    //     insert(dict, daten);
+    // }
 
-    // Zahlen über die Tastatur einlesen und prüfen, ob sie im Dictionary vorhanden sind
-    int daten;
-    while (1)
-    {
-        printf("Geben Sie eine Zahl ein (-1 zum Beenden): ");
-        scanf("%d", &daten);
-        if (daten == -1)
-        {
-            break;
-        }
-        if (member(dict, daten))
-        {
-            printf("Die Zahl %d ist im Dictionary vorhanden.\n", daten);
-        }
-        else
-        {
-            printf("Die Zahl %d ist nicht im Dictionary vorhanden.\n", daten);
-        }
-    }
+    // // Zahlen über die Tastatur einlesen und prüfen, ob sie im Dictionary vorhanden sind
+    // int daten;
+    // while (1)
+    // {
+    //     printf("Geben Sie eine Zahl ein (-1 zum Beenden): ");
+    //     scanf("%d", &daten);
+    //     if (daten == -1)
+    //     {
+    //         break;
+    //     }
+    //     if (member(dict, daten))
+    //     {
+    //         printf("Die Zahl %d ist im Dictionary vorhanden.\n", daten);
+    //     }
+    //     else
+    //     {
+    //         printf("Die Zahl %d ist nicht im Dictionary vorhanden.\n", daten);
+    //     }
+    // }
 
     return 0;
 }

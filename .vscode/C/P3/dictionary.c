@@ -2,19 +2,26 @@
 #include <stdlib.h>
 #define LENGTH_MAX 2
 
+typedef enum status{
+    FREE;
+    TAKEN; //OCCUPIED
+    DELETED;
+} status_t;
+
 typedef struct element
 {
     int value;
-    int deleted;
-} element;
+    // int deleted;
+    status_t s;
+};
 
 static element dictionary[LENGTH_MAX];
 static int currentLength = 0;
 
 int hash(int v, int multiplier)
 {
-    return (v + multiplier * 7) % LENGTH_MAX; // multiplication
-    // return (v + multiplier) % LENGTH_MAX; //linear
+    //return (v + multiplier * 7) % LENGTH_MAX; // multiplication
+     return (v + multiplier) % LENGTH_MAX; //linear
 }
 
 int insert(int v)
@@ -45,7 +52,11 @@ int delete(int v)
 
     int multiplier = 1;
     int pos = hash(v, multiplier);
-    while (dictionary[pos].value != v && !dictionary[pos].deleted)
+    //  0 0 1 
+    //  F G B
+
+    while (dictionary[pos].value != v || dictionary[pos].deleted)
+    // while (dictionary[pos].value != v && !dictionary[pos].deleted)
     {
         multiplier++;
         pos = hash(v, multiplier);
@@ -63,6 +74,7 @@ int member(int v)
     int multiplier = 1;
     int pos = hash(v, multiplier);
     while (dictionary[pos].value != v || dictionary[pos].deleted)
+    // while (dictionary[pos].value != v && !dictionary[pos].deleted)
     {
         multiplier++;
         pos = hash(v, multiplier);
