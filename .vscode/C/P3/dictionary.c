@@ -91,7 +91,7 @@ int main()
     int i;
     for (i = 0; i < LENGTH_MAX; i++)
     {
-        dictionary[i].status == FREE;
+        dictionary[i].status = FREE;
     }
 
     printf("%d\n", insert(1));
