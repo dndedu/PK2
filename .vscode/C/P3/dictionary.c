@@ -11,8 +11,7 @@ typedef enum status{
 typedef struct element
 {
     int value;
-    // int deleted;
-    status_t s;
+    status_t s = FREE;
 };
 
 static element dictionary[LENGTH_MAX];
@@ -20,26 +19,26 @@ static int currentLength = 0;
 
 int hash(int v, int multiplier)
 {
-    //return (v + multiplier * 7) % LENGTH_MAX; // multiplication
-     return (v + multiplier) % LENGTH_MAX; //linear
+    return (v + multiplier) % LENGTH_MAX; //linear probing
 }
 
 int insert(int v)
 {
-    if (currentLength != LENGTH_MAX)
+    if (currentLength < LENGTH_MAX)
     {
         element neu;
         neu.value = v;
-        neu.deleted = 0;
+        // neu.status_t = FREE;
 
         int multiplier = 1;
         int pos = hash(v, multiplier);
-        while (!dictionary[pos].deleted)
+        while (!(dictionary[pos].status_t == TAKEN))
         {
             multiplier++;
             pos = hash(v, multiplier);
         }
         dictionary[pos] = neu;
+        dictionary[pos].status_t = TAKEN;
         currentLength++;
         return 1;
     }
@@ -52,11 +51,8 @@ int delete(int v)
 
     int multiplier = 1;
     int pos = hash(v, multiplier);
-    //  0 0 1 
-    //  F G B
 
-    while (dictionary[pos].value != v || dictionary[pos].deleted)
-    // while (dictionary[pos].value != v && !dictionary[pos].deleted)
+    while (dictionary[pos].value != v || dictionary[pos].status_t == DELETED)
     {
         multiplier++;
         pos = hash(v, multiplier);
