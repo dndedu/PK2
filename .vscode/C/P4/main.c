@@ -3,29 +3,24 @@
 
 #define SIZE 5
 
-// Struktur für die Listenelemente
-typedef struct ListNode
+typedef struct listNode
 {
     int key;
-    struct ListNode *next;
-} ListNode;
+    struct listNode *next;
+} listNode;
 
-// Dictionary-Struktur
-typedef struct
+typedef struct dictionary
 {
-    ListNode *table[SIZE];
-} Dictionary;
+    listNode *table[SIZE];
+} dictionary;
 
-// Globales Dictionary
-Dictionary dict;
+dictionary dict;
 
-// Hash-Funktion
 int hash(int key)
 {
     return key % SIZE;
 }
 
-// Initialisierung des Dictionaries
 void init_dictionary()
 {
     for (int i = 0; i < SIZE; i++)
@@ -34,13 +29,13 @@ void init_dictionary()
     }
 }
 
-// Insert-Operation (konstante Laufzeit)
+// Insert-Funktion mit konstanter Laufzeit
 int insert(int key)
 {
     int index = hash(key);
 
     // Neuen Knoten erstellen
-    ListNode *new_node = (ListNode *)malloc(sizeof(ListNode));
+    listNode *new_node = (listNode *)malloc(sizeof(listNode));
     if (new_node == NULL)
     {
         // Nicht genügend Speicherplatz
@@ -55,13 +50,12 @@ int insert(int key)
     return 1;
 }
 
-// Member-Operation
+// Funktion, welche überprüft, ob Wert im dictionary vorhanden ist
 int member(int key)
 {
     int index = hash(key);
-    ListNode *current = dict.table[index];
+    listNode *current = dict.table[index];
 
-    // Liste durchsuchen
     while (current != NULL)
     {
         if (current->key == key)
@@ -74,19 +68,18 @@ int member(int key)
     return 0;
 }
 
-// Delete-Operation
+// Funktion für das Löschen eines Listenelementes
 int delete(int key)
 {
     int index = hash(key);
-    ListNode *current = dict.table[index];
-    ListNode *prev = NULL;
+    listNode *current = dict.table[index];
+    listNode *prev = NULL;
 
-    // Liste durchsuchen
     while (current != NULL)
     {
         if (current->key == key)
         {
-            // Element gefunden - löschen
+            // Element gefunden, löschen
             if (prev == NULL)
             {
                 // Erstes Element in der Liste
@@ -94,7 +87,7 @@ int delete(int key)
             }
             else
             {
-                // Element in der Mitte oder am Ende
+                // Element in der Mitte / am Ende
                 prev->next = current->next;
             }
             free(current);
@@ -107,14 +100,13 @@ int delete(int key)
     return 0;
 }
 
-// Hilfsfunktion zur Ausgabe des Dictionary-Inhalts
 void print_dictionary()
 {
-    printf("Dictionary contents:\n");
+    printf("dictionary contents:\n");
     for (int i = 0; i < SIZE; i++)
     {
         printf("Bucket %d: ", i);
-        ListNode *current = dict.table[i];
+        listNode *current = dict.table[i];
         while (current != NULL)
         {
             printf("%d -> ", current->key);
@@ -125,7 +117,7 @@ void print_dictionary()
     printf("\n");
 }
 
-// Test-Funktion
+// Funktion für vorgegebenen Test des Programms
 void run_test()
 {
     printf("=== Test-Sequenz ===\n");
@@ -141,7 +133,9 @@ void run_test()
     }
     printf("\n");
 
-    // Member 1 bis SIZE
+    print_dictionary();
+
+    // Member-Prüfung 1 bis SIZE
     printf("Member 1 bis %d: ", SIZE);
     for (i = 1; i <= SIZE; i++)
     {
@@ -149,7 +143,7 @@ void run_test()
     }
     printf("\n");
 
-    // Delete SIZE+1 bis 2*SIZE
+    // Löschen von Listenelementen von SIZE+1 bis 2*SIZE
     printf("Delete %d bis %d: ", SIZE + 1, 2 * SIZE);
     for (i = SIZE + 1; i <= 2 * SIZE; i++)
     {
@@ -157,7 +151,9 @@ void run_test()
     }
     printf("\n");
 
-    // Member 1 bis 2*SIZE
+    print_dictionary();
+
+    // Member-Prüfung 1 bis 2*SIZE
     printf("Member 1 bis %d: ", 2 * SIZE);
     for (i = 1; i <= 2 * SIZE; i++)
     {
@@ -166,7 +162,7 @@ void run_test()
     printf("\n\n");
 }
 
-// Hauptprogramm mit Kommandozeilen-Argumenten
+// Funktion mit Kommandozeilen-Argumenten
 void run_interactive(int argc, char *argv[])
 {
     printf("=== Interaktives Programm ===\n");
@@ -198,6 +194,10 @@ void run_interactive(int argc, char *argv[])
         if (scanf("%d", &input) != 1)
         {
             printf("Ungültige Eingabe!\n");
+            // Puffer leeren, beispielsweise bei Eingabe von NULL, welche Schleife auslöst
+            int c;
+            while ((c = getchar()) != '\n' && c != EOF)
+                ;
             continue;
         }
 
@@ -209,11 +209,11 @@ void run_interactive(int argc, char *argv[])
 
         if (member(input))
         {
-            printf("Die Zahl %d ist im Dictionary enthalten.\n", input);
+            printf("Die Zahl %d ist im dictionary enthalten.\n", input);
         }
         else
         {
-            printf("Die Zahl %d ist NICHT im Dictionary enthalten.\n", input);
+            printf("Die Zahl %d ist NICHT im dictionary enthalten.\n", input);
         }
     }
 }
@@ -223,10 +223,10 @@ void cleanup()
 {
     for (int i = 0; i < SIZE; i++)
     {
-        ListNode *current = dict.table[i];
+        listNode *current = dict.table[i];
         while (current != NULL)
         {
-            ListNode *temp = current;
+            listNode *temp = current;
             current = current->next;
             free(temp);
         }
@@ -236,7 +236,7 @@ void cleanup()
 
 int main(int argc, char *argv[])
 {
-    printf("Hash Dictionary mit Chaining (SIZE = %d)\n", SIZE);
+    printf("Hash dictionary mit Chaining (SIZE = %d)\n", SIZE);
     printf("Hash-Funktion: h(a) = a mod %d\n\n", SIZE);
 
     // Test-Sequenz ausführen
