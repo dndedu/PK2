@@ -1,1 +1,0 @@
-void tabelle_dynamisch_asciiZeichen();
