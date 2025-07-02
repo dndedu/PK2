@@ -1,0 +1,1 @@
+Folder contains the code presented in lessons of the module "Programmierkurs 2" at the "Fachhochschule Dortmund, University of Applied Sciences and Arts", a version of a solution for tasks for the lab/practicum and additional examples for learning purposes.
