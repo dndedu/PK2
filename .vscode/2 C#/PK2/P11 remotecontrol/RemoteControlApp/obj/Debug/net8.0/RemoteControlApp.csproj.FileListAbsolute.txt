@@ -1,0 +1,15 @@
+F:\Workspace\VS Code\Learning\Projects_2_C#\PK2\P11 remotecontrol\RemoteControlApp\bin\Debug\net8.0\RemoteControlApp.exe
+F:\Workspace\VS Code\Learning\Projects_2_C#\PK2\P11 remotecontrol\RemoteControlApp\bin\Debug\net8.0\RemoteControlApp.deps.json
+F:\Workspace\VS Code\Learning\Projects_2_C#\PK2\P11 remotecontrol\RemoteControlApp\bin\Debug\net8.0\RemoteControlApp.runtimeconfig.json
+F:\Workspace\VS Code\Learning\Projects_2_C#\PK2\P11 remotecontrol\RemoteControlApp\bin\Debug\net8.0\RemoteControlApp.dll
+F:\Workspace\VS Code\Learning\Projects_2_C#\PK2\P11 remotecontrol\RemoteControlApp\bin\Debug\net8.0\RemoteControlApp.pdb
+F:\Workspace\VS Code\Learning\Projects_2_C#\PK2\P11 remotecontrol\RemoteControlApp\obj\Debug\net8.0\RemoteControlApp.GeneratedMSBuildEditorConfig.editorconfig
+F:\Workspace\VS Code\Learning\Projects_2_C#\PK2\P11 remotecontrol\RemoteControlApp\obj\Debug\net8.0\RemoteControlApp.AssemblyInfoInputs.cache
+F:\Workspace\VS Code\Learning\Projects_2_C#\PK2\P11 remotecontrol\RemoteControlApp\obj\Debug\net8.0\RemoteControlApp.AssemblyInfo.cs
+F:\Workspace\VS Code\Learning\Projects_2_C#\PK2\P11 remotecontrol\RemoteControlApp\obj\Debug\net8.0\RemoteControlApp.csproj.CoreCompileInputs.cache
+F:\Workspace\VS Code\Learning\Projects_2_C#\PK2\P11 remotecontrol\RemoteControlApp\obj\Debug\net8.0\RemoteControlApp.sourcelink.json
+F:\Workspace\VS Code\Learning\Projects_2_C#\PK2\P11 remotecontrol\RemoteControlApp\obj\Debug\net8.0\RemoteControlApp.dll
+F:\Workspace\VS Code\Learning\Projects_2_C#\PK2\P11 remotecontrol\RemoteControlApp\obj\Debug\net8.0\refint\RemoteControlApp.dll
+F:\Workspace\VS Code\Learning\Projects_2_C#\PK2\P11 remotecontrol\RemoteControlApp\obj\Debug\net8.0\RemoteControlApp.pdb
+F:\Workspace\VS Code\Learning\Projects_2_C#\PK2\P11 remotecontrol\RemoteControlApp\obj\Debug\net8.0\RemoteControlApp.genruntimeconfig.cache
+F:\Workspace\VS Code\Learning\Projects_2_C#\PK2\P11 remotecontrol\RemoteControlApp\obj\Debug\net8.0\ref\RemoteControlApp.dll

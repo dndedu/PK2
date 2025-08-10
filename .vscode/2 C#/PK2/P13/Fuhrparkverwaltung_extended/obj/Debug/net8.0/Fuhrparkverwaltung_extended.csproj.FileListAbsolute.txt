@@ -1,0 +1,15 @@
+F:\Workspace\VS Code\Learning\Projects_2_C#\PK2\P13\Fuhrparkverwaltung_extended\obj\Debug\net8.0\Fuhrparkverwaltung_extended.GeneratedMSBuildEditorConfig.editorconfig
+F:\Workspace\VS Code\Learning\Projects_2_C#\PK2\P13\Fuhrparkverwaltung_extended\obj\Debug\net8.0\Fuhrparkverwaltung_extended.AssemblyInfoInputs.cache
+F:\Workspace\VS Code\Learning\Projects_2_C#\PK2\P13\Fuhrparkverwaltung_extended\obj\Debug\net8.0\Fuhrparkverwaltung_extended.AssemblyInfo.cs
+F:\Workspace\VS Code\Learning\Projects_2_C#\PK2\P13\Fuhrparkverwaltung_extended\obj\Debug\net8.0\Fuhrparkverwaltung_extended.csproj.CoreCompileInputs.cache
+F:\Workspace\VS Code\Learning\Projects_2_C#\PK2\P13\Fuhrparkverwaltung_extended\obj\Debug\net8.0\Fuhrparkverwaltung_extended.sourcelink.json
+F:\Workspace\VS Code\Learning\Projects_2_C#\PK2\P13\Fuhrparkverwaltung_extended\bin\Debug\net8.0\Fuhrparkverwaltung_extended.exe
+F:\Workspace\VS Code\Learning\Projects_2_C#\PK2\P13\Fuhrparkverwaltung_extended\bin\Debug\net8.0\Fuhrparkverwaltung_extended.deps.json
+F:\Workspace\VS Code\Learning\Projects_2_C#\PK2\P13\Fuhrparkverwaltung_extended\bin\Debug\net8.0\Fuhrparkverwaltung_extended.runtimeconfig.json
+F:\Workspace\VS Code\Learning\Projects_2_C#\PK2\P13\Fuhrparkverwaltung_extended\bin\Debug\net8.0\Fuhrparkverwaltung_extended.dll
+F:\Workspace\VS Code\Learning\Projects_2_C#\PK2\P13\Fuhrparkverwaltung_extended\bin\Debug\net8.0\Fuhrparkverwaltung_extended.pdb
+F:\Workspace\VS Code\Learning\Projects_2_C#\PK2\P13\Fuhrparkverwaltung_extended\obj\Debug\net8.0\Fuhrparkverwaltung_extended.dll
+F:\Workspace\VS Code\Learning\Projects_2_C#\PK2\P13\Fuhrparkverwaltung_extended\obj\Debug\net8.0\refint\Fuhrparkverwaltung_extended.dll
+F:\Workspace\VS Code\Learning\Projects_2_C#\PK2\P13\Fuhrparkverwaltung_extended\obj\Debug\net8.0\Fuhrparkverwaltung_extended.pdb
+F:\Workspace\VS Code\Learning\Projects_2_C#\PK2\P13\Fuhrparkverwaltung_extended\obj\Debug\net8.0\Fuhrparkverwaltung_extended.genruntimeconfig.cache
+F:\Workspace\VS Code\Learning\Projects_2_C#\PK2\P13\Fuhrparkverwaltung_extended\obj\Debug\net8.0\ref\Fuhrparkverwaltung_extended.dll

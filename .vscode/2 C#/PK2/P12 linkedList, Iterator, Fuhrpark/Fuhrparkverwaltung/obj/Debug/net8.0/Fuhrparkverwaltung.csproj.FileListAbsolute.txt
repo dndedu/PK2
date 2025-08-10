@@ -1,0 +1,15 @@
+F:\Workspace\VS Code\Learning\Projects_2_C#\PK2\P12 linkedList, Iterator, Fuhrpark\Fuhrparkverwaltung\bin\Debug\net8.0\Fuhrparkverwaltung.exe
+F:\Workspace\VS Code\Learning\Projects_2_C#\PK2\P12 linkedList, Iterator, Fuhrpark\Fuhrparkverwaltung\bin\Debug\net8.0\Fuhrparkverwaltung.deps.json
+F:\Workspace\VS Code\Learning\Projects_2_C#\PK2\P12 linkedList, Iterator, Fuhrpark\Fuhrparkverwaltung\bin\Debug\net8.0\Fuhrparkverwaltung.runtimeconfig.json
+F:\Workspace\VS Code\Learning\Projects_2_C#\PK2\P12 linkedList, Iterator, Fuhrpark\Fuhrparkverwaltung\bin\Debug\net8.0\Fuhrparkverwaltung.dll
+F:\Workspace\VS Code\Learning\Projects_2_C#\PK2\P12 linkedList, Iterator, Fuhrpark\Fuhrparkverwaltung\bin\Debug\net8.0\Fuhrparkverwaltung.pdb
+F:\Workspace\VS Code\Learning\Projects_2_C#\PK2\P12 linkedList, Iterator, Fuhrpark\Fuhrparkverwaltung\obj\Debug\net8.0\Fuhrparkverwaltung.GeneratedMSBuildEditorConfig.editorconfig
+F:\Workspace\VS Code\Learning\Projects_2_C#\PK2\P12 linkedList, Iterator, Fuhrpark\Fuhrparkverwaltung\obj\Debug\net8.0\Fuhrparkverwaltung.AssemblyInfoInputs.cache
+F:\Workspace\VS Code\Learning\Projects_2_C#\PK2\P12 linkedList, Iterator, Fuhrpark\Fuhrparkverwaltung\obj\Debug\net8.0\Fuhrparkverwaltung.AssemblyInfo.cs
+F:\Workspace\VS Code\Learning\Projects_2_C#\PK2\P12 linkedList, Iterator, Fuhrpark\Fuhrparkverwaltung\obj\Debug\net8.0\Fuhrparkverwaltung.csproj.CoreCompileInputs.cache
+F:\Workspace\VS Code\Learning\Projects_2_C#\PK2\P12 linkedList, Iterator, Fuhrpark\Fuhrparkverwaltung\obj\Debug\net8.0\Fuhrparkverwaltung.sourcelink.json
+F:\Workspace\VS Code\Learning\Projects_2_C#\PK2\P12 linkedList, Iterator, Fuhrpark\Fuhrparkverwaltung\obj\Debug\net8.0\Fuhrparkverwaltung.dll
+F:\Workspace\VS Code\Learning\Projects_2_C#\PK2\P12 linkedList, Iterator, Fuhrpark\Fuhrparkverwaltung\obj\Debug\net8.0\refint\Fuhrparkverwaltung.dll
+F:\Workspace\VS Code\Learning\Projects_2_C#\PK2\P12 linkedList, Iterator, Fuhrpark\Fuhrparkverwaltung\obj\Debug\net8.0\Fuhrparkverwaltung.pdb
+F:\Workspace\VS Code\Learning\Projects_2_C#\PK2\P12 linkedList, Iterator, Fuhrpark\Fuhrparkverwaltung\obj\Debug\net8.0\Fuhrparkverwaltung.genruntimeconfig.cache
+F:\Workspace\VS Code\Learning\Projects_2_C#\PK2\P12 linkedList, Iterator, Fuhrpark\Fuhrparkverwaltung\obj\Debug\net8.0\ref\Fuhrparkverwaltung.dll

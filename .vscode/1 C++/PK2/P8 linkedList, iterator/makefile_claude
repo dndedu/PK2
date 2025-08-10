@@ -1,0 +1,15 @@
+//===== Makefile (optional) =====
+CXX = g++
+CXXFLAGS = -std=c++11 -Wall -Wextra
+
+TARGET = praktikum8
+SOURCES = main.cpp linkedList.cpp
+HEADERS = iterator.h linkedList.h
+
+$(TARGET): $(SOURCES) $(HEADERS)
+	$(CXX) $(CXXFLAGS) $(SOURCES) -o $(TARGET)
+
+clean:
+	rm -f $(TARGET)
+
+.PHONY: clean

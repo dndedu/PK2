@@ -1,0 +1,35 @@
+# Compiler und Flags
+CXX = g++
+CXXFLAGS = -std=c++17 -Wall -Wextra
+
+# Ziel-Executable
+TARGET = medienverwaltung
+
+# Source-Dateien
+SOURCES = main.cpp Medium.cpp Audio.cpp Bild.cpp
+
+# Object-Dateien (automatisch aus Source-Dateien generiert)
+OBJECTS = $(SOURCES:.cpp=.o)
+
+# Standard-Target
+all: $(TARGET)
+
+# Executable erstellen
+$(TARGET): $(OBJECTS)
+	$(CXX) $(OBJECTS) -o $(TARGET)
+
+# Object-Dateien kompilieren
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
+# Aufräumen
+clean:
+	rm -f $(OBJECTS) $(TARGET)
+
+# Abhängigkeiten
+main.o: main.cpp Audio.h Bild.h
+Medium.o: Medium.cpp Medium.h
+Audio.o: Audio.cpp Audio.h Medium.h
+Bild.o: Bild.cpp Bild.h Medium.h
+
+.PHONY: all clean
