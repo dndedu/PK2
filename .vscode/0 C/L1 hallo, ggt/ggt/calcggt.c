@@ -7,7 +7,12 @@
 
 int main()
 {
-    printf("%d", ggt(7, 28));
+    printf("Enter two positive natural numbers to determine their greatest common divisor:");
+    int number_one;
+    scanf("%d",&number_one);
+    int number_two;
+    scanf("%d",&number_two);
+    printf("%d\n", ggt(number_one, number_two));
     return 0;
 }
 
