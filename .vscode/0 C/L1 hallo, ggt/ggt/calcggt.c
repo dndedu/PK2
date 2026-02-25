@@ -12,7 +12,7 @@ int main()
     scanf("%d",&number_one);
     int number_two;
     scanf("%d",&number_two);
-    printf("%d\n", ggt(number_one, number_two));
+    printf("The greatest common divisor of %d and %d is %d.\n", number_one, number_two, ggt(number_one, number_two));
     return 0;
 }
 

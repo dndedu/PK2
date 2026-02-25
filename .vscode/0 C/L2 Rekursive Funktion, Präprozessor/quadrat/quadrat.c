@@ -22,7 +22,7 @@ int quadrat(int x)
 
 void print_quadrat(int x)
 {
-  printf("%d\n", quadrat(x));
+  printf("Die Quadratzahl von %d ist: %d.\n", x, quadrat(x));
 }
 
 int main()
@@ -30,6 +30,6 @@ int main()
   print_quadrat(2);
   int a = 2 * quadrat(2);
 
-  printf("Summe(%d) = %ld\n", a, summe(a));
+  printf("Die Quersumme von %d ist: %ld.\n", a, summe(a));
   return 0;
 }
