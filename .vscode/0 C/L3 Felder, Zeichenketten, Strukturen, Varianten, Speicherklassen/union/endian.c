@@ -14,7 +14,7 @@ int main()
     int i;
     for (i = 0; i < sizeof(int); i++)
     {
-        printf("%d", e.byte[i]);
+        printf("%d ", e.byte[i]);
     }
     printf("\n");
 

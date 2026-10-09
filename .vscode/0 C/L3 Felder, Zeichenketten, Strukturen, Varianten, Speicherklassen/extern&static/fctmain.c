@@ -15,9 +15,9 @@ int summe(int n)
     c++;
     printf("Anzahl Aufrufe summe = %d\n", c);
 
-    // // vorige Lösung
-    // if (n == 0)
-    //     return 0;
+    // vorige Lösung
+    if (n == 0)
+        return 0;
 
     // ein Aufruf weniger
     if (n == 1)

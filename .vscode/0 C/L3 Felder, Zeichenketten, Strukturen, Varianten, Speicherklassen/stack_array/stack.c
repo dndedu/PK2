@@ -16,7 +16,7 @@ int push(long key)
     }
 }
 
-// Achtung: Key -1 kann nicht gespeichert werden
+// Achtung: Key -1 kann nicht gespeichert werden; Lösungsmöglichkeit Key-Value (Position im Stack, Wert)
 long pop()
 {
     if (top > -1)

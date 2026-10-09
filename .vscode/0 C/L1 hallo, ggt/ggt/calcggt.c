@@ -2,11 +2,17 @@
 #include <stdio.h>
 #include "ggt.h"
 
+#define X 2
+
 // Methodenankündigung
 // int ggt();
 
 int main()
 {
+    if(X > 3) {
+
+    }
+
     printf("Enter two positive natural numbers to determine their greatest common divisor:");
     int number_one;
     scanf("%d",&number_one);

@@ -37,18 +37,18 @@ struct rechteck create_rechteck_punkt(struct punkt punkt_1, struct punkt punkt_2
 
 int flaeche(struct rechteck r)
 {
-    return abs((r.p2.x - r.p1.x) * (r.p2.y - r.p1.y)); // absoluter Betrag, da bei Multiplikation eine mögliche negative Differenz zu einem negativen Ergebnis führen
+    return abs((r.p2.x - r.p1.x) * (r.p2.y - r.p1.y)); // absoluter Betrag, da bei Multiplikation eine mögliche negative Differenz zu einem negativen Ergebnis führt
 }
 
 void print_punkt(struct punkt p)
 {
-    printf("(%d, %d)\n", p.x, p.y);
+    printf("Punkt = (%d, %d)\n", p.x, p.y);
 }
 
 int main()
 {
-    struct rechteck r = create_rechteck_int(100, 110, 110, 100);
-    printf("Fläche = %d\n", flaeche(r)); // TODO absoluten Betrag
+    struct rechteck r_int = create_rechteck_int(100, 110, 110, 100);
+    printf("Fläche = %d\n", flaeche(r_int));
 
     struct punkt p;
     p.x = 100;
@@ -58,8 +58,8 @@ int main()
     q.x = 200;
     q.y = 400;
     print_punkt(q);
-    struct rechteck s = create_rechteck_punkt(p, q);
-    printf("Fläche = %d\n", flaeche(s));
+    struct rechteck r_punkt = create_rechteck_punkt(p, q);
+    printf("Fläche = %d\n", flaeche(r_punkt));
 
     return 0;
 }
