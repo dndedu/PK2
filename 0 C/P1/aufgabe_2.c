@@ -5,7 +5,7 @@ void tabelle_zahlMultipliziertBisZehn()
 {
     int von = 10, bis = 20;
 
-    printf("Einmaleins\n");
+    printf("Folgend Start- und Endwert für das Einmaleins (Darstellung der Vielfache einer Zahl) eingeben\n");
     printf("Von: ");
     scanf("%d", &von);
 

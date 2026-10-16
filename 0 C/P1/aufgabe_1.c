@@ -4,7 +4,7 @@
 void tabelle_dynamisch_asciiZeichen()
 {
     int s = 10, i;
-    printf("Spalten: ");
+    printf("Ganzzahligen positiven Wert für Anzahl der Spalten angeben: ");
     scanf("%d", &s);
     for (i = 32; i <= 126; i++)
     {
