@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Fuhrparkverwaltung_extended")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1595250fdc5fb1c23cc165a85ff96e3af822469b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4b520913bcca2035fb719778f32105ec06fcc127")]
 [assembly: System.Reflection.AssemblyProductAttribute("Fuhrparkverwaltung_extended")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Fuhrparkverwaltung_extended")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
