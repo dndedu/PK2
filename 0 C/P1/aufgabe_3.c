@@ -3,9 +3,9 @@
 
 void wholeNumber_toBinary()
 {
-    int decimal;
+    int wholeNumber;
     printf("Enter a whole number (which will be displayed in its binary form):\n");
-    scanf("%d", &decimal);
+    scanf("%d", &wholeNumber);
 
     int binary[16];
     for (int i = 0; i < 16; i++)
@@ -14,10 +14,10 @@ void wholeNumber_toBinary()
     }
 
     int i = 0;
-    while (decimal > 0)
+    while (wholeNumber > 0)
     {
-        binary[i++] = decimal % 2;
-        decimal /= 2;
+        binary[i++] = wholeNumber % 2;
+        wholeNumber /= 2;
     }
     for (i = 15; i >= 0; i--)
     {

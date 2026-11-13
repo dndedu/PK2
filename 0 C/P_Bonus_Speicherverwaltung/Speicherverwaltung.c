@@ -15,8 +15,8 @@
  * automatisch mit 0 initialisiert. Dadurch ist beim Programmstart
  * der komplette Speicher "frei" (Flag 0) und alle Bytes sind 0.
  * ------------------------------------------------------------------ */
-static char memory[MEMSIZE]; /* die eigentlichen Daten            */
-static char belegt[MEMSIZE]; /* Flag je Byte: 1 = belegt, 0 = frei */
+static char memory[MEMSIZE];      /* die eigentlichen Daten */
+static char memory_used[MEMSIZE]; /* Flag je Byte: 1 = memory_used, 0 = frei */
 
 /* ------------------------------------------------------------------
  * 2. Zeiger-Struktur
@@ -77,17 +77,17 @@ pointer_t memalloc(int n)
 
     for (i = 0; i < MEMSIZE; i++)
     {
-        if (belegt[i] == 0)
+        if (memory_used[i] == 0)
             frei++; /* freies Byte: Bereich wächst */
         else
-            frei = 0; /* belegtes Byte: von vorn zählen */
+            frei = 0; /* memory_used Byte: von vorn zählen */
 
         if (frei == n)
         {                          /* passender Bereich gefunden */
             p.adresse = i - n + 1; /* Startindex des Bereichs */
             p.groesse = n;
             for (j = p.adresse; j < p.adresse + n; j++)
-                belegt[j] = 1; /* Bereich als belegt markieren */
+                memory_used[j] = 1; /* Bereich als memory_used markieren */
             return p;
         }
     }
@@ -102,7 +102,7 @@ void memfree(pointer_t p)
     if (ptrisnull(p))
         return;
     for (i = p.adresse; i < p.adresse + p.groesse; i++)
-        belegt[i] = 0;
+        memory_used[i] = 0;
 }
 
 /* ------------------------------------------------------------------
@@ -122,7 +122,7 @@ void memdump(int c)
     {
         /* (unsigned char): verhindert Vorzeichenerweiterung bei Hex-Ausgabe */
         printf("[%03d:%02X:%c]", i, (unsigned char)memory[i],
-               belegt[i] ? '#' : '_');
+               memory_used[i] ? '#' : '_');
         if ((i + 1) % c == 0) /* Zeilenumbruch nach c Spalten */
             printf("\n");
     }
@@ -136,7 +136,7 @@ void memdump(int c)
  * ------------------------------------------------------------------ */
 char test(int nr)
 {
-    pointer_t pInt, pText, pDouble;
+    pointer_t pInt, pText, pDouble_timesThree;
     int zahl = 271; /* Zwischenspeicher für ptrset */
     double werte[3] = {0.1, 2.3, -4.5};
     double gelesen[3];
@@ -160,11 +160,11 @@ char test(int nr)
     memfree(pInt); /* 10. int freigeben */
     memdump(8);    /* 11. */
 
-    pDouble = memalloc(3 * sizeof(double)); /* 12. Platz für 3 double */
-    if (ptrisnull(pDouble))
-        return 0;           /* 13. */
-    ptrset(pDouble, werte); /* 14. Array schreiben */
-    memdump(8);             /* 15. */
+    pDouble_timesThree = memalloc(3 * sizeof(double)); /* 12. Platz für 3 double */
+    if (ptrisnull(pDouble_timesThree))
+        return 0;                      /* 13. */
+    ptrset(pDouble_timesThree, werte); /* 14. Array schreiben */
+    memdump(8);                        /* 15. */
 
     /* 16. Zeichenkette lesend über den Zeiger ausgeben */
     printf("Text: %s\n", (char *)ptrget(pText));
@@ -172,7 +172,7 @@ char test(int nr)
     /* 17. Double-Array lesend ausgeben. Zuerst in ein lokales Array
        kopieren: Die Adresse im char-Array ist nicht zwingend passend
        für double ausgerichtet (Alignment). */
-    memcpy(gelesen, ptrget(pDouble), sizeof(gelesen));
+    memcpy(gelesen, ptrget(pDouble_timesThree), sizeof(gelesen));
     printf("Wert[1]: %.1f\n", gelesen[1]);
 
     return 1; /* 18. */
